@@ -53,7 +53,7 @@ h1, h2 {
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
-/* Floating hearts */
+/* Floating hearts & sparkles */
 .hearts, .sparkles {
   position: fixed;
   width: 100%;
@@ -77,13 +77,6 @@ h1, h2 {
   font-size: 26px;
   font-weight: bold;
   color: #9a4f6b;
-}
-
-/* Video */
-video {
-  max-width: 900px;
-  border-radius: 22px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* Form */
@@ -113,22 +106,18 @@ input, textarea {
 <div class="hearts"></div>
 <div class="sparkles"></div>
 
-<!-- VIDEO INTRO -->
+<!-- HERO INTRO -->
 <section>
   <h1>Mi Alma… This Is For You 💎</h1>
   <p>A love story made just for you.</p>
-  <video controls>
-    <source src="video.mp4" type="video/mp4">
-  </video>
-  <br><br>
-  <button class="btn" onclick="scrollToSection('meet')">Enter Our Love Story 💖</button>
+  <button class="btn" onclick="scrollToSection('meet')">"I like your nails" somebody said. And I was like "oh, thank you. They are my natural nails." Then he said,I have met so many people, can I have your picture so I can attach it to your number? And I was like sure, I will send it later.The best love story I know. I met the best that day. And 4 years later, here we are. 💖</button>
 </section>
 
 <!-- HOW WE MET -->
 <section id="meet">
   <h2>The Day Our Story Began 🐟</h2>
   <p>
-    The first time we met, I hand-fed you fish…  
+    Do you remember our fish story, I hand-fed you fish…  
     and then later denied it like an innocent angel 😌  
     But from that moment, my heart already knew it was you.
   </p>
@@ -141,17 +130,17 @@ input, textarea {
 
   <div class="gallery">
     <div>
-      <img src="photo1.jpg">
+      <img src="IMG-20250712-WA0019.jpg">
       <p>From feeding fish… to feeding each other cake 💘</p>
     </div>
 
     <div>
-      <img src="photo2.jpg">
+      <img src="IMG_20250723_160644.jpg">
       <p>My favorite smile is the one we share 💖</p>
     </div>
 
     <div>
-      <img src="photo3.jpg">
+      <img src="IMG_20250720_152758.jpg">
       <p>Every date with you feels like home 🕯️</p>
     </div>
   </div>
@@ -181,7 +170,7 @@ input, textarea {
     My Mi Alma,  
     You are one of the greatest blessings of my life.  
     Your love feels like warmth, safety, and peace.  
-    I admire your strength, your devotion, and your heart.  
+    I admire your strength, your commitment, and your love for me.  
     Thank you for choosing me and building a future with me.  
     I promise to love you deeply, respect you always,  
     and choose you in every lifetime.  
@@ -279,7 +268,7 @@ setInterval(() => {
   setTimeout(() => sparkle.remove(), 8000);
 }, 700);
 
-// Countdown to Valentine’s Day
+// Countdown
 const target = new Date("Feb 14, 2026 00:00:00").getTime();
 setInterval(() => {
   const now = new Date().getTime();
