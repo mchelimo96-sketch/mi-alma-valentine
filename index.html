@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Mi Alma 💍</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: radial-gradient(circle at top, #fffaf7, #fde6f0);
+  color: #2b2b2b;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: Playfair Display, serif;
+  color: #8b5e73;
+}
+
+.btn {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #d8a7c3, #b77fa3);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  gap: 20px;
+  max-width: 950px;
+  margin: auto;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* Floating hearts */
+.hearts, .sparkles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+}
+
+.heart, .sparkle {
+  position: absolute;
+  animation: float 8s infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Countdown */
+.countdown {
+  font-size: 26px;
+  font-weight: bold;
+  color: #9a4f6b;
+}
+
+/* Video */
+video {
+  max-width: 900px;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Form */
+form {
+  max-width: 650px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+input, textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #d7b6c6;
+  font-size: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hearts"></div>
+<div class="sparkles"></div>
+
+<!-- VIDEO INTRO -->
+<section>
+  <h1>Mi Alma… This Is For You 💎</h1>
+  <p>A love story made just for you.</p>
+  <video controls>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+  <br><br>
+  <button class="btn" onclick="scrollToSection('meet')">Enter Our Love Story 💖</button>
+</section>
+
+<!-- HOW WE MET -->
+<section id="meet">
+  <h2>The Day Our Story Began 🐟</h2>
+  <p>
+    The first time we met, I hand-fed you fish…  
+    and then later denied it like an innocent angel 😌  
+    But from that moment, my heart already knew it was you.
+  </p>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section>
+  <h2>My Favorite Memories Are With You 💞</h2>
+  <p>Every picture holds a heartbeat. Every heartbeat chooses you.</p>
+
+  <div class="gallery">
+    <div>
+      <img src="photo1.jpg">
+      <p>From feeding fish… to feeding each other cake 💘</p>
+    </div>
+
+    <div>
+      <img src="photo2.jpg">
+      <p>My favorite smile is the one we share 💖</p>
+    </div>
+
+    <div>
+      <img src="photo3.jpg">
+      <p>Every date with you feels like home 🕯️</p>
+    </div>
+  </div>
+</section>
+
+<!-- WESTGATE -->
+<section>
+  <h2>The Day You Changed My Life 💍</h2>
+  <p>
+    My favorite memory will always be when you proposed  
+    at Westgate Mall.  
+    My heart raced. My forever became real.  
+    Saying yes to you changed my life forever.
+  </p>
+</section>
+
+<!-- COUNTDOWN -->
+<section>
+  <h2>Countdown To Forever ⏳💖</h2>
+  <div class="countdown" id="countdown"></div>
+</section>
+
+<!-- LOVE LETTER -->
+<section>
+  <h2>A Letter to My Forever Love 💌</h2>
+  <p style="max-width:820px; margin:auto; line-height:1.8;">
+    My Mi Alma,  
+    You are one of the greatest blessings of my life.  
+    Your love feels like warmth, safety, and peace.  
+    I admire your strength, your devotion, and your heart.  
+    Thank you for choosing me and building a future with me.  
+    I promise to love you deeply, respect you always,  
+    and choose you in every lifetime.  
+    <br><br>
+    Forever yours,  
+    <strong>Your Valentine 💖</strong>
+  </p>
+</section>
+
+<!-- SWEET & SPICY -->
+<section>
+  <h2>You’re My Favorite Everything 😌🔥</h2>
+  <p>
+    My best friend.  
+    My peace.  
+    My favorite voice.  
+    My favorite kiss.  
+    And yes… my favorite distraction.
+  </p>
+</section>
+
+<!-- VALENTINE QUESTION -->
+<section>
+  <h2>Now Tell Me, Mi Alma… 💘</h2>
+  <p>Will you be my Valentine — today, this year, and forever?</p>
+
+  <button class="btn" onclick="showYes()">Yes, always 💖</button>
+  <button class="btn" onclick="showYes()">Of course, my love 😍</button>
+  <button class="btn" onclick="moveButton(this)">Try to say no 😏</button>
+
+  <h3 id="yesText" style="display:none; margin-top:20px;">
+    Correct answer 😌 You’re officially mine forever 💍❤️
+  </h3>
+</section>
+
+<!-- MINI FORM -->
+<section>
+  <h2>Reply To Your Valentine 💌</h2>
+  <form>
+    <input placeholder="One thing you love about me">
+    <input placeholder="Our next date idea">
+    <input placeholder="How does being my Valentine feel?">
+    <textarea placeholder="A private message just for me"></textarea>
+    <button class="btn" type="submit">Send To My Heart 💘</button>
+  </form>
+</section>
+
+<!-- FINAL -->
+<section>
+  <h1>You’re Officially My Valentine, Mi Alma 💍❤️</h1>
+  <p style="max-width:820px; margin:auto;">
+    Thank you for choosing me.  
+    Thank you for loving me.  
+    I promise to cherish you endlessly.  
+    Now come claim your Valentine kiss 😘💋
+  </p>
+</section>
+
+<script>
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+function showYes() {
+  document.getElementById("yesText").style.display = "block";
+}
+
+function moveButton(btn) {
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * 80 + "%";
+  btn.style.top = Math.random() * 80 + "%";
+}
+
+// Floating hearts
+const hearts = document.querySelector(".hearts");
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 25 + 15 + "px";
+  hearts.appendChild(heart);
+  setTimeout(() => heart.remove(), 8000);
+}, 500);
+
+// Sparkles
+const sparkles = document.querySelector(".sparkles");
+setInterval(() => {
+  const sparkle = document.createElement("div");
+  sparkle.className = "sparkle";
+  sparkle.innerHTML = "✨";
+  sparkle.style.left = Math.random() * 100 + "vw";
+  sparkle.style.fontSize = Math.random() * 20 + 10 + "px";
+  sparkles.appendChild(sparkle);
+  setTimeout(() => sparkle.remove(), 8000);
+}, 700);
+
+// Countdown to Valentine’s Day
+const target = new Date("Feb 14, 2026 00:00:00").getTime();
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = target - now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  document.getElementById("countdown").innerText = days + " days until our forever 💖";
+}, 1000);
+</script>
+
+</body>
+</html>
